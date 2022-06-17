@@ -16,7 +16,7 @@ getting current full url
 
 
 {{-- getting Old Rural to Current Rural --}}
-{{-- {{url()->previous();}} --}} 
+s{{-- {{url()->previous();}} --}} 
 
 <section class="w3l-breadcrumb">
     <div class="breadcrumb-bg breadcrumb-bg-about py-5">

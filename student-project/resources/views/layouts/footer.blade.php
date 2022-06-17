@@ -1,3 +1,6 @@
+
+{{route('layouts.footer/{id}', ['id' => 1]);}}
+
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
       <div class="container py-md-4">

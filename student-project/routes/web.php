@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
+use App\Http\Controllers\DiscountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +54,28 @@ Route::get('/contact', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
+
+// Route::get('/layouts/footer/{id}', function ( $post) {
+//     return view('layouts.footer');
+// })->name('layouts.footer');// urls from named route
+
+// Route::get('/discount', function(){
+//     return 'some_discount_code_here';
+// });
+ 
+
+
+Route::get('/discount', [DiscountController::class, 'discount'])->name('discountCode')->middleware('signed');
+
+
+// Route::get('/unsubscribe/{user}', function (Request $request) {
+//     if (! $request->hasValidSignature()) {
+//         abort(401);
+//     }
+ 
+//     // ...
+// })->name('unsubscribe');
+
+
+
+Route::get('/unsubscribe',[]);
