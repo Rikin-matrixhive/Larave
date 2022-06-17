@@ -344,14 +344,14 @@
     </div>
 </section>
 <!-- footer -->
-@extends ('layouts.js')
+{{-- @extends ('layouts.js')
 @section ('js')
 @endsection
 
 
 @extends('layouts.footer')
 @section('footer')
-@endsection
+@endsection --}}
 </body>
 
 </html>

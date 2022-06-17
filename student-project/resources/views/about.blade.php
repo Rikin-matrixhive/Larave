@@ -1,31 +1,8 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Study Course - Education Category Bootstrap Responsive Template | Home : W3layouts</title>
 
-    <!-- google fonts -->
-    <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="{{ asset('css/style-starter.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    
-  </head>
-  <body>
-    @extends('layouts.app2')
-    @section('app2')
-    @endsection
-<!--header-->
-<!--/header-->
-<!-- about breadcrumb -->
+@extends('layouts.app2')
+@section('content')
+@endsection
 <section class="w3l-breadcrumb">
     <div class="breadcrumb-bg breadcrumb-bg-about py-5">
         <div class="container pt-lg-5 pt-3 p-lg-4 pb-3">
@@ -231,13 +208,13 @@ Author URL: http://w3layouts.com
     </div>
 </section>
 <!-- //stats -->
-@extends ('layouts.js')
+{{-- @extends ('layouts.js')
 @section ('js')
 @endsection
 <!-- footer -->
 @extends ('layouts.footer')
 @section ('footer')
-@endsection
+@endsection --}}
 
 </body>
 

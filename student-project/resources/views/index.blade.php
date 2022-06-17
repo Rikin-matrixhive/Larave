@@ -9,7 +9,8 @@ Author URL: http://w3layouts.com
 @section('app2')
 @endsection
 
-
+<body>
+    
 <section class="w3l-main-slider" id="home">
     <div class="companies20-content">
         <div class="owl-one owl-carousel owl-theme">
@@ -531,12 +532,6 @@ Author URL: http://w3layouts.com
         </div>
     </div>
 </section>
-@extends ('layouts.js')
-@section ('js')
-@endsection
 
-@extends ('layouts.footer')
-@section ('footer')
-@endsection
 </body>
 </html>

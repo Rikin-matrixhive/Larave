@@ -5,15 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Study Course - Education Category Bootstrap Responsive Template | Home : W3layouts</title>
+    <title>Welcome</title>
 
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="{{ asset('css/style-starter.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+
     
   
   </head>
@@ -45,7 +46,9 @@
             <li class="nav-item @@about__active">
               <a class="nav-link" href="about">About</a>
             </li>
-          
+            <li class="nav-item @@about__active">
+              <a class="nav-link" href="about">About</a>
+            </li>
             <li class="nav-item @@courses__active">
               <a class="nav-link" href="courses">Courses</a>
             </li>
@@ -86,8 +89,18 @@
             </div>
           </nav>
         </div>
+        
         <!-- //toggle switch for light and dark theme -->
       </nav>
     </div>
   </header>
-  @yield('app2')
+<div class="yieldclass">
+  @yield('content')
+</div>
+<div class="footer">
+  @include('layouts.footer')
+
+</div>
+@include('layouts.js')
+</body>
+</html>

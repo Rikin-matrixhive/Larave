@@ -1,12 +1,6 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
-<
-<!--header-->
+
 @extends('layouts.app2')
-@section('app2')
-@endsection
+@section('content')
 <!--/header-->
 <!-- about breadcrumb -->
 <section class="w3l-breadcrumb">
@@ -14,7 +8,7 @@ Author URL: http://w3layouts.com
         <div class="container pt-lg-5 pt-3 p-lg-4 pb-3">
             <h2 class="title mt-5 pt-lg-5 pt-sm-3">Get in touch</h2>
             <ul class="breadcrumbs-custom-path pb-sm-5 pb-4 mt-2 text-center mb-md-5">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index">Home</a></li>
                 <li class="active"> / Contact us </li>
             </ul>
         </div>
@@ -97,15 +91,16 @@ Author URL: http://w3layouts.com
 </div>
 <!-- //contact block -->
 <!-- footer -->
-@extends('layouts.js')
+{{-- @extends('layouts.js')
 @section('js')
 @endsection
 
 @extends('layouts.footer')
 @section('footer')
-@endsection
-<!-- //footer -->
+@endsection --}}
+<!-- //footer -->         
 
+@endsection
 
 </body>
 
