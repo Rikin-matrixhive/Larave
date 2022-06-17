@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\DiscountController;
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,9 +57,9 @@ Route::get('/courses', function () {
     return view('courses');
 });
 
-// Route::get('/layouts/footer/{id}', function ( $post) {
-//     return view('layouts.footer');
-// })->name('layouts.footer');// urls from named route
+Route::get('/layouts/footer/{id}', function ( $post) {
+   // return view('layouts.footer');
+})->name('layouts.footer');// urls from named route
 
 // Route::get('/discount', function(){
 //     return 'some_discount_code_here';
@@ -65,7 +67,7 @@ Route::get('/courses', function () {
  
 
 
-Route::get('/discount', [DiscountController::class, 'discount'])->name('discountCode')->middleware('signed');
+// Route::get('/discount', [DiscountController::class, 'discount'])->name('discountCode')->middleware('signed');
 
 
 // Route::get('/unsubscribe/{user}', function (Request $request) {
@@ -75,7 +77,4 @@ Route::get('/discount', [DiscountController::class, 'discount'])->name('discount
  
 //     // ...
 // })->name('unsubscribe');
-
-
-
-Route::get('/unsubscribe',[]);
+Route::get('/discount', [DiscountController::class, 'discount']);

@@ -1,5 +1,5 @@
 
-{{route('layouts.footer/{id}', ['id' => 1]);}}
+{{route('layouts.footer', ['id' => 1])}}
 
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
