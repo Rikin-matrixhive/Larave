@@ -1,16 +1,6 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
 
-  <body>
-<!--header-->
     @extends('layouts.app2')
-@section('app2')
-@endsection
-
-<body>
-    
+@section('content')
 <section class="w3l-main-slider" id="home">
     <div class="companies20-content">
         <div class="owl-one owl-carousel owl-theme">
@@ -533,5 +523,4 @@ Author URL: http://w3layouts.com
     </div>
 </section>
 
-</body>
-</html>
+@endsection

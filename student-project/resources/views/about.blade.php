@@ -2,7 +2,6 @@
 
 @extends('layouts.app2')
 @section('content')
-@endsection
 <section class="w3l-breadcrumb">
     <div class="breadcrumb-bg breadcrumb-bg-about py-5">
         <div class="container pt-lg-5 pt-3 p-lg-4 pb-3">
@@ -208,14 +207,4 @@
     </div>
 </section>
 <!-- //stats -->
-{{-- @extends ('layouts.js')
-@section ('js')
 @endsection
-<!-- footer -->
-@extends ('layouts.footer')
-@section ('footer')
-@endsection --}}
-
-</body>
-
-</html>

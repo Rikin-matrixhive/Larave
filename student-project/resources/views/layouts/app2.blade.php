@@ -97,10 +97,10 @@
 <div class="yieldclass">
   @yield('content')
 </div>
+@include('layouts.js')
 <div class="footer">
   @include('layouts.footer')
-
 </div>
-@include('layouts.js')
+
 </body>
 </html>
