@@ -53,6 +53,12 @@ return [
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
+        'customlog'=>[
+          'driver' => 'single',
+          'path' => storage_path('logs/mycustomlog.php'),
+          'level' => 'info',
+
+        ],
 
         'single' => [
             'driver' => 'single',

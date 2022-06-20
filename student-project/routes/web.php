@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\DiscountController;
+use App\Http\Controllers\HomeController;
 
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 
@@ -78,3 +79,17 @@ Route::get('/layouts/footer/{id}', function ( $post) {
 //     // ...
 // })->name('unsubscribe');
 Route::get('/discount', [DiscountController::class, 'discount']);
+
+
+
+Route:: get('/log',function(){
+
+    \Log::info('testing log');
+});
+
+
+Route::get('create-custom-log', function () {
+  
+    \Log::channel('itsolution')->info('rikin');
+     
+});

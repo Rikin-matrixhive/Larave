@@ -77,6 +77,8 @@
         </svg>
     </div>
 </section>
+<input type="text" name="title" value="{{ old('title') }}">
+
 
 <section class="w3l-courses">
     <div class="blog pb-5" id="courses">
