@@ -41,4 +41,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Using Model Factories
+
+    public function run()
+{
+    User::factory()
+            ->count(50)
+            ->hasPosts(1)
+            ->create();
+
+    // Calling Additional Seeders
+
+
+            $this->call([
+                UserSeeder::class,
+                PostSeeder::class,
+                CommentSeeder::class,
+            ]);
+
+            // Muting Model Events
+
+
+            $this->call([
+                UserSeeder::class,
+            ]);
+}
+
+
 }

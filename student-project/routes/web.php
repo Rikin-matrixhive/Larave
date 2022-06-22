@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DemoController;
+
 
 use Illuminate\Http\Request;
 
@@ -93,3 +95,7 @@ Route::get('create-custom-log', function () {
     \Log::channel('itsolution')->info('rikin');
      
 });
+
+
+
+Route::get('/demofile', [DemoController::class ,'Listing_Data']);

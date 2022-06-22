@@ -126,7 +126,7 @@ class DiscountController extends Controller
 
             $users = DB::table('users')->skip(2)->take(2)->get();
 
-            dd( $users);
+            //dd( $users);
 
 
 
@@ -155,16 +155,27 @@ class DiscountController extends Controller
 
     //    /. dd($locking);
 
-        $affected = DB::table('users')
-        ->where('id', 1)
-        ->update(['name->enabled' => true]);
+        // $affected = DB::table('users')
+        // ->where('id', 1)
+        // ->update(['name->enabled' => true]);
         
         // echo $affected;
-        $query = DB::table('users')->select('name');
+        // $query = DB::table('users')->select('name');
  
-        $users = $query->addSelect('age')->get();
+        // $users = $query->addSelect('age')->get();
 
-        return $users;
+
+        $users = DB::select('select * from users where id = ?', [1]);
+
+
+        // $burgers = DB::scalar(
+        //     "select count(case when id = '1' then 1 end) as name from users"
+        // );
+
+         $users = DB::connection('mysql')->select('select * from users where id = 1');
+
+         return $users;
+
 
 
 
@@ -172,5 +183,5 @@ class DiscountController extends Controller
 
     public function index(){
     }
-}
+}   
 
