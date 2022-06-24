@@ -16,14 +16,12 @@ class CollectionController extends Controller
 
         //for collection
 
-        $users->contains(1);
- 
-$users->contains(User::find(1));
+
     }
     public function store(Request $request)
     {
         $crud = new Flight;
-        // dd($request->all());
+     //sdd($request->all());
         $crud->airline =  $request->get('airline');
         $crud->airline2 = $request->get('airline2');
         $crud->save();
@@ -39,9 +37,6 @@ $users->contains(User::find(1));
 
     public function show()
     {
-        $user = Flight::find(1);
-
-        $firstName = $user->airline;
-        echo $firstName;
+  
     }
 }

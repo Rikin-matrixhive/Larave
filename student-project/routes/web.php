@@ -6,9 +6,12 @@ use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\CollectionController;
-
-
+use App\Http\Controllers\MemberController;
 use Illuminate\Http\Request;
+
+use App\Http\Resources\UserResource;
+use App\Models\Flight;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -125,4 +128,19 @@ Route::get('/collection',[CollectionController::class,'index']);
 Route::post('/collection',[CollectionController::class,'store']);
 
 
-Route::get('/collection',[CollectionController::class,'show']);
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------
+                               // for resoursce
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Route::apiResource('/unsubscribe',MemberController::class);
+
+
+
+Route::get('/memberfile',[MemberController::class,'index']);
