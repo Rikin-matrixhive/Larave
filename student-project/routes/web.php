@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\CollectionController;
 
 
 use Illuminate\Http\Request;
@@ -99,3 +100,29 @@ Route::get('create-custom-log', function () {
 
 
 Route::get('/demofile', [DemoController::class ,'Listing_Data']);
+
+
+Route::post('/demofile', [DemoController::class ,'store']);
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+                                    //  Collection
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Route::get('/collection',[CollectionController::class,'index']);
+
+
+Route::post('/collection',[CollectionController::class,'store']);
+
+
+Route::get('/collection',[CollectionController::class,'show']);

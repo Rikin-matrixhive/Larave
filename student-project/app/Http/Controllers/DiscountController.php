@@ -11,41 +11,41 @@ class DiscountController extends Controller
 {
     public function discount()
     {
-        $users = DB::table('users')->get();
-        // return $users;// object format
-        $users = DB::table('users')->first();
-        // return $users;//return first records from table
+    //     $users = DB::table('users')->get();
+    //     // return $users;// object format
+    //     $users = DB::table('users')->first();
+    //     // return $users;//return first records from table
 
-        $email = DB::table('users')->where('name', 'rikin')->value('email');
-       // return $email;  value is use for get specific users email id 
+    //     $email = DB::table('users')->where('name', 'rikin')->value('email');
+    //    // return $email;  value is use for get specific users email id 
 
-        $user = DB::table('users')->find(1);
-        //return $user;// display first records
+    //     $user = DB::table('users')->find(1);
+    //     //return $user;// display first records
 
 
-        $titles = DB::table('users')->pluck('created_at');
-        //return $titles; // for getting specific reocors all
+    //     $titles = DB::table('users')->pluck('created_at');
+    //     //return $titles; // for getting specific reocors all
 
-        $titles = DB::table('users')->pluck('id', 'name');
-        //return $titles; // getting specific reocors as per id and name      
+    //     $titles = DB::table('users')->pluck('id', 'name');
+    //     //return $titles; // getting specific reocors as per id and name      
 
-        $users = DB::table('users')->count();
-        //return $users; // for counting all the records
+    //     $users = DB::table('users')->count();
+    //     //return $users; // for counting all the records
  
-        $price = DB::table('users')->max('id');
+    //     $price = DB::table('users')->max('id');
 
-        //return $price; //for counting maximum num of the records
+    //     //return $price; //for counting maximum num of the records
 
-        $price = DB::table('users')->sum('id');
-        //return $price;// for sum of all the records
+    //     $price = DB::table('users')->sum('id');
+    //     //return $price;// for sum of all the records
 
-        $price = DB::table('users')->avg('id');
+    //     $price = DB::table('users')->avg('id');
 
-        //return $price; // getting avrage
+    //     //return $price; // getting avrage
 
-        $price = DB::table('users')->min('id');
+    //     $price = DB::table('users')->min('id');
 
-       // return $price;// getting minimum value
+    //    // return $price;// getting minimum value
 
 
 
@@ -174,7 +174,8 @@ class DiscountController extends Controller
 
          $users = DB::connection('mysql')->select('select * from users where id = 1');
 
-         return $users;
+         //return $users;
+
 
 
 

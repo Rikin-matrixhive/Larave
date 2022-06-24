@@ -66,7 +66,19 @@ class User extends Authenticatable
             $this->call([
                 UserSeeder::class,
             ]);
+
+
+            
 }
 
+public function phone()
+    {
+        return $this->hasOne('App\Model\Flight');
+    }
 
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new AncientScope);
+    }
 }
